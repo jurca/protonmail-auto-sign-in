@@ -10,7 +10,7 @@
     "128": "icon/128.png"
   },
 
-  "author": "Martin Jurča <mjurca+googlewebstore@centrum.cz>",
+  "author": "Martin Jurča <mjurca@centrum.cz>",
   "background": {
     "scripts": [
       "config.js",
