@@ -1,0 +1,16 @@
+
+label {
+  display: flex;
+}
+
+label span {
+  display: inline-block;
+
+  min-width: 8rem;
+
+  line-height: 25px;
+}
+
+label input {
+  flex: 1 0 auto;
+}

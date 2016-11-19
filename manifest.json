@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Protonmail automatic sing-in",
+  "version": "0.1.0",
+
+  "description": "Utility for automatic signing into the Proton mail encrypted e-mail service.",
+  "icons": {
+    "16": "icon/16.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
+
+  "author": "Martin Jurča <mjurca+googlewebstore@centrum.cz>",
+  "background": {
+    "scripts": [
+      "config.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.protonmail.com/login"],
+      "js": ["config.js", "utils.js", "accountSignIn.js"]
+    },
+    {
+      "matches": ["https://mail.protonmail.com/login/unlock"],
+      "js": ["config.js", "utils.js", "inboxDecryption.js"]
+    }
+  ],
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  }
+}
